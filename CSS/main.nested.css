@@ -1,0 +1,228 @@
+#envelope {
+  color: #dd4b39; }
+  #envelope.active, #envelope:hover {
+    color: #fff;
+    background: #dd4b39; }
+
+.envelope-text {
+  background: #dd4b39; }
+
+#whatsapp {
+  color: #25D366; }
+  #whatsapp.active, #whatsapp:hover {
+    color: #fff;
+    background: #25D366; }
+
+.whatsapp-text {
+  background: #25D366; }
+
+#facebook {
+  color: #3b5999; }
+  #facebook.active, #facebook:hover {
+    color: #fff;
+    background: #3b5999; }
+
+.facebook-text {
+  background: #3b5999; }
+
+#linkedin {
+  color: #0077B5; }
+  #linkedin.active, #linkedin:hover {
+    color: #fff;
+    background: #0077B5; }
+
+.linkedin-text {
+  background: #0077B5; }
+
+.page-content .tab .home-content, .page-content .tab .about-content, .page-content .tab .education-content, .page-content .tab .skills-content, .page-content .tab .contact-content {
+  color: #fff;
+  padding: 0px 25px 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.tab-1, .tab-2, .tab-3, .tab-4, .tab-5 {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover; }
+
+.tab-1 {
+  background-image: url("../IMG/mountains-1.jpg"); }
+
+.tab-2 {
+  background-image: url("../IMG/mountains-2.jpg"); }
+
+.tab-3 {
+  background-image: url("../IMG/mountains-3.jpg"); }
+
+.tab-4 {
+  background-image: url("../IMG/mountains-4.jpg"); }
+
+.tab-5 {
+  background-image: url("../IMG/mountains-5.jpg"); }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Merriweather", serif;
+  box-sizing: border-box; }
+
+.left-menu {
+  position: fixed;
+  width: 0%;
+  min-height: 100%;
+  background: #111111;
+  z-index: 3; }
+  .left-menu .menu-content {
+    opacity: 0; }
+  .left-menu .closer {
+    background: #111111;
+    padding: 5px 15px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    outline: 0; }
+    .left-menu .closer:active {
+      background: #343434; }
+  .left-menu .menu-items {
+    padding: 30px 0px;
+    text-align: center;
+    transition: all .5s;
+    color: #fff;
+    border-bottom: 1px solid #4a4a4a;
+    font-size: 5vw; }
+    .left-menu .menu-items:hover {
+      background: #343434;
+      text-decoration: none; }
+    .left-menu .menu-items.active {
+      background: #343434; }
+
+.page-content {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .page-content .opener {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #111111;
+    padding: 5px 15px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+    z-index: 3; }
+    .page-content .opener:active {
+      background: #343434; }
+  .page-content .tab {
+    display: none;
+    color: #fff; }
+    .page-content .tab .home-content h1 {
+      font-size: 5vw;
+      font-weight: bolder;
+      font-family: "Merriweather", serif;
+      margin-top: 20px; }
+      .page-content .tab .home-content h1 .two {
+        font-family: "Chango", cursive;
+        font-size: 4vw;
+        background: #343434;
+        padding: 10px 20px;
+        border-radius: 20px 0px 20px 0px; }
+    .page-content .tab .home-content h5 {
+      font-size: 1.5vw; }
+    .page-content .tab .home-content p span {
+      background: #343434;
+      padding: 5px;
+      border-radius: 10px; }
+    .page-content .tab .about-content {
+      text-align: center; }
+      .page-content .tab .about-content h1 {
+        font-family: "Chango", cursive;
+        font-size: 4.7vw;
+        margin-bottom: 30px; }
+        .page-content .tab .about-content h1 span {
+          background: #343434;
+          padding: 0px 10px;
+          border-radius: 15px; }
+      .page-content .tab .about-content p {
+        font-size: 1.6vw;
+        color: #d6d6d6;
+        margin-bottom: 6px;
+        line-height: 2; }
+        .page-content .tab .about-content p span {
+          border: 1px solid #fff;
+          padding: 3px 6px;
+          margin: 0px 5px; }
+    .page-content .tab .education-content .textfill {
+      font-size: 20px; }
+    .page-content .tab .skills-content h1 {
+      font-family: "Chango", cursive;
+      font-size: 2.6vw;
+      margin-bottom: 30px; }
+    .page-content .tab .skills-content h3 {
+      font-size: 2.3vw;
+      margin-top: 25px; }
+    .page-content .tab .skills-content .skill {
+      margin-bottom: 5px;
+      text-align: right; }
+      .page-content .tab .skills-content .skill span {
+        font-size: 1.5vw; }
+      .page-content .tab .skills-content .skill .progress {
+        display: inline-flex;
+        margin-left: 10px;
+        width: 27vw;
+        height: 20px;
+        border-radius: 20px; }
+    .page-content .tab .skills-content ul {
+      margin: 15px 0px 0px 40px; }
+      .page-content .tab .skills-content ul li {
+        font-size: 1.3vw;
+        margin-left: 5px; }
+    .page-content .tab .contact-content h1 {
+      font-family: "Chango", cursive;
+      font-size: 2.3vw;
+      margin-bottom: 30px; }
+    .page-content .tab .contact-content .social {
+      margin-bottom: 15px;
+      text-align: center; }
+      .page-content .tab .contact-content .social .btn {
+        background: #fff;
+        padding: 2px 2px 2px 6px; }
+        .page-content .tab .contact-content .social .btn div {
+          display: inline-block;
+          font-size: 1.8vw;
+          position: relative;
+          top: -5px;
+          width: 0px;
+          overflow: hidden; }
+    .page-content .tab .side-word {
+      font-size: 5vw;
+      color: rgba(255, 255, 255, 0.3);
+      transform: rotate(270deg);
+      position: fixed;
+      right: -70px;
+      top: 50%;
+      height: 0px;
+      width: 300px;
+      white-space: nowrap; }
+    .page-content .tab footer {
+      text-align: center;
+      border-top: 2px solid #fff;
+      padding: 15px 0px 0px;
+      margin-top: 30px; }
+      .page-content .tab footer h5 {
+        text-transform: uppercase;
+        font-size: 1.2vw; }
+      .page-content .tab footer h6 {
+        font-size: 1.1vw; }

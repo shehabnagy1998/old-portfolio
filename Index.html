@@ -1,0 +1,148 @@
+<html ng-app="angularApp">
+    <head>
+        <meta charset="utf-8">
+        <!-- start css files -->
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/all.min.css">
+        <link rel="stylesheet" href="CSS/ripple.css">
+        <link href="https://fonts.googleapis.com/css?family=Chango" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <link href="CSS/emoji.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/main.nested.css">
+        <link rel="stylesheet" href="CSS/media.css">
+        <!-- end css files -->
+        <title>My Portofolio</title>
+        <link rel="icon" href="ICO/">
+        <!-- start js before files -->
+        <script src="js/all.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-animate.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/mainAng.js"></script>
+        <!-- end js before files -->
+    </head>
+    <body ng-controller="mainCtrl">
+
+      <!-- start left menu -->
+      <aside class="left-menu">
+        <!-- start content of left menu -->
+        <section class="menu-content container-fluid p-0">
+          <div class="row no-gutters d-lg-none justify-content-end">
+            <button type="button" class="closer">
+              <i class="fas fa-chevron-left fa-6x"></i>
+            </button>
+          </div>
+          <div class="row no-gutters">
+            <a href="#home-tab" class="col-12 menu-items active">
+              <i class="fas fa-home fa-2x d-block mb-2 mx-auto"></i>
+            </a>
+            <a href="#about-tab" class="col-12 menu-items">
+              <i class="fas fa-book-open fa-2x d-block mb-2 mx-auto"></i>
+              About
+            </a>
+            <a href="#skills-tab" class="col-12 menu-items">
+              <i class="fas fa-star fa-2x d-block mb-2 mx-auto"></i>
+              Skills
+            </a>
+            <a href="#contact-tab" class="col-12 menu-items">
+              <i class="fas fa-comments fa-2x d-block mb-2 mx-auto"></i>
+              Contact
+            </a>
+          </div>
+        </section>
+        <!-- end content of left menu -->
+      </aside>
+      <!-- end left menu -->
+
+
+      <!-- start page content -->
+      <article class="page-content">
+
+        <button type="button" class="d-block d-lg-none opener">
+          <i class="fas fa-chevron-right fa-6x"></i>
+        </button>
+
+        <section class="tab tab-1" id="home-tab">
+          <div class="overlay"></div>
+          <div class="home-content">
+            <h5>Welcome to My Site</h5>
+            <h1>Hello, <span class="two">World !</span></h1>
+            <footer>
+              <h5>copyright &copy all rights reserved</h5>
+              <h6>Designed with <i class="fas fa-heart text-danger"></i> by ME</h6>
+            </footer>
+          </div>
+        </section>
+        <section class="tab tab-2" id="about-tab">
+          <div class="overlay"></div>
+          <div class="side-word">About Me</div>
+          <div class="about-content">
+            <h1>Who Am <span>I</span> !?</h1>
+            <p>My name is shehab nagy a <span>Front-End Designer</span>, iam 20 years old</p>
+            <p>Iam third year student in El-Shorouk Academy, Computer Science Dep.</p>
+            <p>I like coding, love to try new things</p>
+            <p>I Never give up on something</p>
+            <p>Hard-Woking person</p>
+            <p>Good in problem solving</p>
+            <p></p>
+            <footer>
+              <h5>copyright &copy all rights reserved</h5>
+              <h6>Designed with <i class="fas fa-heart text-danger"></i> by ME</h6>
+            </footer>
+          </div>
+        </section>
+        <section class="tab tab-3" id="skills-tab">
+          <div class="overlay"></div>
+          <div class="side-word">My Skills</div>
+          <div class="skills-content">
+            <h1>Why U should hire me ?</h1>
+            <h3>Skills: </h3>
+              <div class="skill" ng-repeat="skill in skills">
+                <span style="">{{skill.name}}</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.persent}};">{{skill.persent}}
+                  </div>
+                </div>
+              </div>
+            <h3>Languages: </h3>
+            <ul class="list-inline">
+              <li class="list-inline-item" ng-repeat = "lang in languages"><i class="fas fa-circle text-{{lang.color}} mr-1"></i> {{lang.name}} - {{lang.persent}}</li>
+            </ul>
+            <footer>
+              <h5>copyright &copy all rights reserved</h5>
+              <h6>Designed with <i class="fas fa-heart text-danger"></i> by ME</h6>
+            </footer>
+          </div>
+        </section>
+        <section class="tab tab-4" id="contact-tab">
+          <div class="overlay"></div>
+          <div class="side-word">Contact</div>
+          <div class="contact-content">
+            <h1>How to contact with me ?</h1>
+            <div class="social" ng-repeat = "soc in social">
+              <button type="button" class="btn" id= {{soc.id}}>
+                <i class="d-none d-lg-inline-block {{soc.cla}} fa-2x"></i>
+                <i class="d-lg-none {{soc.cla}} fa-3x"></i>
+                <div>{{soc.cont}}</div>
+              </button>
+            </div>
+            <footer>
+              <h5>copyright &copy all rights reserved</h5>
+              <h6>Designed with <i class="fas fa-heart text-danger"></i> by ME</h6>
+            </footer>
+          </div>
+        </section>
+      </article>
+        <!-- end page content -->
+
+        <!-- start js after files -->
+        <script src="JS/jquery-3.3.1.min.js"></script>
+        <script src="JS/popper.min.js"></script>
+        <script src="JS/bootstrap.min.js"></script>
+        <script src="JS/ripple.js"></script>
+        <script src="JS/jquery.textfill.min.js"></script>
+        <script src="JS/main.js"></script>
+        <!-- end js after files -->
+    </body>
+</html>

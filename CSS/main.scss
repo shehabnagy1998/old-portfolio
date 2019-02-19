@@ -1,0 +1,299 @@
+$primary-color: #343434;
+$secondary-color: #fff;
+$menu-bg: #111111;
+$primary-font: 'Chango', cursive;
+$secondary-font: 'Merriweather', serif;
+$main-padding: 50px;
+$social-colors: ("envelope": #dd4b39, "whatsapp": #25D366, "facebook": #3b5999, "linkedin": #0077B5);
+
+@each $id, $color in $social-colors {
+  ##{$id}{
+    color: $color;
+    &.active, &:hover {
+      color: #fff;
+      background: $color;
+    }
+  }
+  .#{$id}-text {
+    background: $color;
+  }
+}
+
+@mixin side-word() {
+  font-size: 5vw;
+  color: rgba(255, 255, 255, 0.3);
+  transform: rotate(270deg);
+  position: fixed;
+  right: -70px;
+  top: 50%;
+  height: 0px;
+  width: 300px;
+  white-space: nowrap;
+}
+
+%bordered-box {
+  color: #fff;
+  // border-bottom: 5px solid #fff;
+  padding: 0px 25px 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+%backgroundImage {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+@for $i from 1 through 5{
+  .tab-#{$i} {
+    @extend %backgroundImage;
+    background-image: url("../IMG/mountains-#{$i}.jpg");
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: $secondary-font;
+  box-sizing: border-box;
+}
+
+.left-menu {
+  position: fixed;
+  width: 0%;
+  min-height: 100%;
+  background: $menu-bg;
+  z-index: 3;
+
+  .menu-content {
+    opacity: 0;
+  }
+
+  .closer {
+    background: $menu-bg;
+    padding: 5px 15px;
+    border: 0;
+    color: $secondary-color;
+    cursor: pointer;
+    outline: 0;
+
+    &:active {
+      background: $primary-color;
+    }
+  }
+
+  .menu-items {
+    padding: 30px 0px;
+    text-align: center;
+    transition: all .5s;
+    color: #fff;
+    border-bottom: 1px solid #4a4a4a;
+    font-size: 5vw;
+
+    &:hover {
+      background: $primary-color;
+      text-decoration: none;
+    }
+    &.active {
+      background: $primary-color;
+    }
+  }
+}
+
+.page-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .opener {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $menu-bg;
+    padding: 5px 15px;
+    border: 0;
+    color: $secondary-color;
+    cursor: pointer;
+    outline: 0;
+    z-index: 3;
+
+    &:active {
+      background: $primary-color;
+    }
+  }
+
+  .tab {
+      display: none;
+      color: #fff;
+
+      .home-content {
+        @extend %bordered-box;
+
+        h1 {
+          font-size: 5vw;
+          font-weight: bolder;
+          font-family: $secondary-font;
+          margin-top: 20px;
+
+          .two {
+            font-family: $primary-font;
+            font-size: 4vw;
+            background: $primary-color;
+            padding: 10px 20px;
+            border-radius: 20px 0px 20px 0px;
+          }
+        }
+
+        h5 {
+          font-size: 1.5vw;
+        }
+
+        p span{
+          background: $primary-color;
+          padding: 5px;
+          border-radius: 10px;
+        }
+      }
+
+      .about-content {
+          @extend %bordered-box;
+          text-align: center;
+
+          h1 {
+            font-family: $primary-font;
+            font-size: 4.7vw;
+            margin-bottom: 30px;
+
+            span {
+              background: $primary-color;
+              padding: 0px 10px;
+              border-radius: 15px;
+            }
+          }
+
+          p {
+            font-size: 1.6vw;
+            color: #d6d6d6;
+            margin-bottom: 6px;
+            line-height: 2;
+
+            span {
+              border: 1px solid #fff;
+              padding: 3px 6px;
+              margin: 0px 5px;
+            }
+          }
+      }
+
+      .education-content {
+        @extend %bordered-box;
+
+        .textfill {
+          font-size: 20px;
+        }
+      }
+
+      .skills-content {
+        @extend %bordered-box;
+
+        h1 {
+          font-family: $primary-font;
+          font-size: 2.6vw;
+          margin-bottom: 30px;
+        }
+
+        h3 {
+          font-size: 2.3vw;
+          margin-top: 25px
+        }
+
+        .skill {
+          margin-bottom: 5px;
+          text-align: right;
+
+          span {
+            font-size: 1.5vw;
+          }
+
+          .progress {
+            display: inline-flex;
+            margin-left: 10px;
+            width: 27vw;
+            height: 20px;
+            border-radius: 20px;
+          }
+        }
+
+        ul {
+          margin: 15px 0px 0px 40px;
+
+          li {
+            font-size: 1.3vw;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .contact-content {
+        @extend %bordered-box;
+
+        h1 {
+          font-family: $primary-font;
+          font-size: 2.3vw;
+          margin-bottom: 30px;
+        }
+
+        .social {
+          margin-bottom: 15px;
+          text-align: center;
+
+          .btn {
+            background: #fff;
+            padding: 2px 2px 2px 6px;
+
+            div {
+              display: inline-block;
+              font-size: 1.8vw;
+              position: relative;
+              top: -5px;
+              width: 0px;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+
+      .side-word {
+        @include side-word();
+      }
+
+      footer {
+        text-align: center;
+        border-top: 2px solid #fff;
+        padding: 15px 0px 0px;
+        margin-top: 30px;
+
+        h5 {
+          text-transform: uppercase;
+          font-size: 1.2vw;
+        }
+
+        h6 {
+          font-size: 1.1vw;
+        }
+      }
+    }
+  }

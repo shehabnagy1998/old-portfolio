@@ -1,0 +1,48 @@
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (min-width: 575.98px) {
+
+
+
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 767.98px) {
+
+
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 991.98px) {
+  .left-menu {
+    width: 10%;
+  }
+
+  .left-menu .menu-items {
+    padding: 13px;
+    font-size: 1.3vw;
+  }
+
+  .left-menu .menu-content {
+    opacity: 1;
+  }
+
+  .page-content {
+    width: 90%;
+    margin-left: 10%;
+  }
+
+  .page-content .tab .contact-content .social .btn div {
+    display: inline-block;
+    font-size: 1.2vw;
+    width: 0px;
+    top: 0;
+    overflow: hidden; }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 1200px) {
+
+
+
+}
